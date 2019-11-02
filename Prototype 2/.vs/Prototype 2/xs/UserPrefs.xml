@@ -5,8 +5,11 @@
         <State name="__root__">
           <Node name="Prototype 2" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Challenge 2" expanded="True">
+                <Node name="Scripts" expanded="True" />
+              </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="PlayerController.cs" selected="True" />
+                <Node name="DestroyOutOfBounds.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -16,7 +19,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0044afbe-8c7b-4fcb-b9f0-27c57dd1f6c6" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="539a0154-cbbf-4f0a-ba56-fff4f890f401" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
