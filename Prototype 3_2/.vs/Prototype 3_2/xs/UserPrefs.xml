@@ -1,14 +1,18 @@
 ﻿<Properties StartupConfiguration="{AE865D67-DED9-375B-248D-5B218CD6B6DD}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MoveLeft.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MoveLeft.cs" Line="10" Column="5" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Prototype 3_2" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Challenge 3" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="MoveLeftX.cs" selected="True" />
-                </Node>
+                <Node name="Scripts" expanded="True" />
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="MoveLeft.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -18,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fda389ed-dfbc-44e3-a080-aa9409271688" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="51fbef01-7547-42a6-af8b-dfa18c542363" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
