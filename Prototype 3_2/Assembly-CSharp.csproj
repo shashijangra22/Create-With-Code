@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Challenge 3\_Source_Files\SpinObjectsX.cs" />
+    <Compile Include="Assets\Challenge 3\Scripts\GameManager.cs" />
     <Compile Include="Assets\Challenge 3\Scripts\MoveLeftX.cs" />
     <Compile Include="Assets\Challenge 3\Scripts\PlayerControllerX.cs" />
     <Compile Include="Assets\Challenge 3\Scripts\RepeatBackgroundX.cs" />

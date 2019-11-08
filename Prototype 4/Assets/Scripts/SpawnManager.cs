@@ -6,30 +6,43 @@ public class SpawnManager : MonoBehaviour
 {
 
     public GameObject enemyPrefab;
-    public GameObject powerUpPrefab;
+    public GameObject healthPrefab;
+    public GameManager gameManager;
+    public GameObject ammoRoundPrefab;
+    public GameObject bossPrefab;
     private float spawnRange = 9.0f;
-    public int enemyCount;
-    public int waveCount = 1;
     // Start is called before the first frame update
     void Start()
     {
-        SpawnEnemyWave(waveCount);
-        Instantiate(powerUpPrefab,GenerateRandomPosition(),powerUpPrefab.transform.rotation);
+        SpawnEnemyWave(gameManager.level);
+        SpawnHealth(GenerateRandomPosition());
+        SpawnAmmo(GenerateRandomPosition());
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemyCount = FindObjectsOfType<Enemy>().Length;
-        if (enemyCount == 0)
+        if (gameManager.isGameActive)
         {
-            waveCount++;
-            Instantiate(powerUpPrefab, GenerateRandomPosition(), powerUpPrefab.transform.rotation);
-            SpawnEnemyWave(waveCount);
+            int enemyCount = FindObjectsOfType<Enemy>().Length;
+            if (gameManager.level >= 10 && enemyCount==0 && !gameManager.isBossActive)
+            {
+                gameManager.ActivateBoss();
+                Instantiate(bossPrefab, GenerateRandomPosition(), bossPrefab.transform.rotation);
+            }
+            else
+            {
+                if (enemyCount == 0 && !gameManager.isBossActive)
+                {
+                    //next level update here
+                    gameManager.updateLevel();
+                    SpawnEnemyWave(gameManager.level);
+                }
+            }
         }
     }
 
-    void SpawnEnemyWave(int enemiesToSpawn)
+    public void SpawnEnemyWave(int enemiesToSpawn)
     {
         for(int i=0; i<enemiesToSpawn; i++)
         {
@@ -42,5 +55,21 @@ public class SpawnManager : MonoBehaviour
         float spawnPosX = Random.Range(-spawnRange, spawnRange);
         float spawnPosZ = Random.Range(-spawnRange, spawnRange);
         return new Vector3(spawnPosX, 0, spawnPosZ);
+    }
+
+    public void SpawnHealth(Vector3 pos)
+    {
+        if (gameManager.isGameActive)
+        {
+            Instantiate(healthPrefab, pos + new Vector3(0, 0.5f, 0), healthPrefab.transform.rotation);
+        }
+    }
+
+    public void SpawnAmmo(Vector3 pos)
+    {
+        if (gameManager.isGameActive)
+        {
+            Instantiate(ammoRoundPrefab, pos + new Vector3(0, 0.5f, 0), ammoRoundPrefab.transform.rotation);
+        }
     }
 }

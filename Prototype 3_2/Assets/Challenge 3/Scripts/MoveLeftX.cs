@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class MoveLeftX : MonoBehaviour
 {
-    public float speed;
     private PlayerControllerX playerControllerScript;
+    private GameManager gameManagerScript;
     private float leftBound = -10;
 
     // Start is called before the first frame update
     void Start()
     {
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerControllerX>();
+        gameManagerScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -20,7 +21,8 @@ public class MoveLeftX : MonoBehaviour
         // If game is not over, move to the left
         if (!playerControllerScript.gameOver)
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
+            gameManagerScript.speed += 0.05f;
+            transform.Translate(Vector3.left * gameManagerScript.speed * Time.deltaTime, Space.World);
         }
 
         // If object goes off screen that is NOT the background, destroy it

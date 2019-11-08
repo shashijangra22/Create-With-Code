@@ -6,6 +6,15 @@ TagManager:
   tags:
   - PowerUp
   - Enemy
+  - Powerup
+  - Health
+  - Good Ammo
+  - Bad Ammo
+  - Island1
+  - Island2
+  - Bridge
+  - AmmoRound
+  - Mystery Box
   layers:
   - Default
   - TransparentFX

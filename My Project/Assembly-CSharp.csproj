@@ -63,9 +63,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Asset Store\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\Scripts\MoveDown.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SpawnManager.cs" />
+    <None Include="Assets\Course Library\Fonts\Oswald\OFL.txt" />
+    <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />
+    <None Include="Assets\Course Library\Fonts\Margarine\OFL.txt" />
+    <None Include="Assets\Course Library\Fonts\Exo_2\OFL.txt" />
+    <None Include="Assets\Course Library\Fonts\Baloo_Chettan\OFL.txt" />
+    <None Include="Assets\Course Library\_Source_Files\Materials\UnlitVertexColour_Alpha.shader" />
+    <None Include="Assets\Course Library\Fonts\Indie_Flower\OFL.txt" />
+    <None Include="Assets\Course Library\Fonts\Roboto\LICENSE.txt" />
+    <None Include="Assets\Asset Store\Gems Ultimate Pack\READ ME.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/scar/Desktop/Create-With-Code/My Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

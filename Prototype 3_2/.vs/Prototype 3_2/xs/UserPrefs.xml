@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{AE865D67-DED9-375B-248D-5B218CD6B6DD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MoveLeft.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
     <Files>
-      <File FileName="Assets/Scripts/MoveLeft.cs" Line="10" Column="5" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="45" Column="52" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +12,7 @@
                 <Node name="Scripts" expanded="True" />
               </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="MoveLeft.cs" selected="True" />
+                <Node name="PlayerController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -22,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="51fbef01-7547-42a6-af8b-dfa18c542363" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bd23b3dc-425e-48d3-b5c1-f94f0f23dbc6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
