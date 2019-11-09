@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
         if (gameManager.isGameActive)
         {
             int enemyCount = FindObjectsOfType<Enemy>().Length;
-            if (gameManager.level >= 3 && enemyCount==0 && !gameManager.isBossActive)
+            if (gameManager.level >= 5 && enemyCount==0 && !gameManager.isBossActive)
             {
                 gameManager.ActivateBoss();
                 Instantiate(bossPrefab, GenerateRandomPosition(), bossPrefab.transform.rotation);
