@@ -387,9 +387,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53608f4099b24b808cbf6760d4efc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnim: {fileID: 0}
   ammoPrefab: {fileID: 2221697677424981446, guid: 21b87c28fc9b44cd8a62072a74e14887,
     type: 3}
-  playerAnim: {fileID: 0}
+  spawnManager: {fileID: 0}
   playerAudio: {fileID: 0}
   fireSound: {fileID: 8300000, guid: 55ee0e07cc1304ec4aa0dacba6a249c2, type: 3}
   collisionSound: {fileID: 8300000, guid: 430a890fb607d471db897c36240711fa, type: 3}

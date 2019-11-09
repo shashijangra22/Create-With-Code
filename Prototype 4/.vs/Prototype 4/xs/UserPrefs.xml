@@ -1,17 +1,8 @@
 ﻿<Properties StartupConfiguration="{53F2696F-91F9-D403-3CD8-B368D375157F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpawnManager.cs">
-    <Files>
-      <File FileName="Assets/Scripts/SpawnManager.cs" Line="39" Column="55" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="116" Column="23" />
-      <File FileName="Assets/Scripts/Player2Controller.cs" Line="61" Column="6" />
-      <File FileName="Assets/Scripts/MoveForward.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="31" Column="1" />
-      <File FileName="Assets/Scripts/Boss.cs" Line="28" Column="63" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="09061794-f706-4fb1-b184-3fbdb0a59e04" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c61d2b95-d214-4ae5-ad9f-234d5737d2ab" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

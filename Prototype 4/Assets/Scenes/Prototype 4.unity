@@ -1678,8 +1678,9 @@ MonoBehaviour:
   isBossActive: 0
   bossHealth: 20
   bossSpeed: 3
+  bossFireRate: 3
   health: 5
-  ammoLeft: 5
+  ammoLeft: 10
   level: 0
   survivalTime: 0
   enemySpeed: 1
@@ -2519,11 +2520,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbb1f1870479488caff9c7f915a625b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 696097104}
   enemyPrefab: {fileID: 2448697136977671143, guid: 6d12e9325ba3f4706ae5e0f0a3befda0,
     type: 3}
   healthPrefab: {fileID: 2212553079254782595, guid: aea73a0fa4dee473f961ce6f2ddbf88c,
     type: 3}
-  gameManager: {fileID: 696097104}
   ammoRoundPrefab: {fileID: 4823065007791054912, guid: 90ad7b6d2a77b46fda5b237ac997670d,
     type: 3}
   bossPrefab: {fileID: 8233962185406450614, guid: 57ece9477224d4d479d48750672c5511,

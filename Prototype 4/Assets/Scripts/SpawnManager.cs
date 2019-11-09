@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-
+    public GameManager gameManager;
     public GameObject enemyPrefab;
     public GameObject healthPrefab;
-    public GameManager gameManager;
     public GameObject ammoRoundPrefab;
     public GameObject bossPrefab;
+
     private float spawnRange = 9.0f;
+
     // Start is called before the first frame update
     void Start()
     {
         SpawnEnemyWave(gameManager.level);
-        SpawnHealth(GenerateRandomPosition());
-        SpawnAmmo(GenerateRandomPosition());
     }
 
     // Update is called once per frame
@@ -25,10 +24,11 @@ public class SpawnManager : MonoBehaviour
         if (gameManager.isGameActive)
         {
             int enemyCount = FindObjectsOfType<Enemy>().Length;
-            if (gameManager.level >= 10 && enemyCount==0 && !gameManager.isBossActive)
+            if (gameManager.level >= 3 && enemyCount==0 && !gameManager.isBossActive)
             {
                 gameManager.ActivateBoss();
                 Instantiate(bossPrefab, GenerateRandomPosition(), bossPrefab.transform.rotation);
+                InvokeRepeating("SpawnAfterBoss", 0, 3.0f);
             }
             else
             {
@@ -57,7 +57,7 @@ public class SpawnManager : MonoBehaviour
         return new Vector3(spawnPosX, 0, spawnPosZ);
     }
 
-    public void SpawnHealth(Vector3 pos)
+    public void SpawnHealth(Vector3 pos=new Vector3())
     {
         if (gameManager.isGameActive)
         {
@@ -65,11 +65,17 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    public void SpawnAmmo(Vector3 pos)
+    public void SpawnAmmo(Vector3 pos = new Vector3())
     {
         if (gameManager.isGameActive)
         {
             Instantiate(ammoRoundPrefab, pos + new Vector3(0, 0.5f, 0), ammoRoundPrefab.transform.rotation);
         }
+    }
+
+    public void SpawnAfterBoss()
+    {
+        SpawnAmmo(GenerateRandomPosition());
+        SpawnHealth(GenerateRandomPosition());
     }
 }

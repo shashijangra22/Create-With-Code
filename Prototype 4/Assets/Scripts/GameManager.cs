@@ -14,14 +14,18 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI bossHealthText;
     public TextMeshProUGUI survivalTimeText;
+
     public GameObject titleScreen;
     public GameObject gameOverScreen;
     public GameObject YouWonScreen;
+
     public Button restartButton;
+
     public bool isGameActive = false;
     public bool isBossActive = false;
     public int bossHealth;
     public float bossSpeed;
+    public float bossFireRate;
     public int health;
     public int ammoLeft;
     private int kills=-1;
@@ -69,6 +73,7 @@ public class GameManager : MonoBehaviour
         fireRate /= difficulty;
         enemySpeed *= difficulty;
         ammoSpeed *= difficulty;
+        bossFireRate /= difficulty;
         titleScreen.gameObject.SetActive(false);
         updateScore(0);
         updateAmmo(0);

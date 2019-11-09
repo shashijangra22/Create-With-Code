@@ -5,26 +5,28 @@ using UnityEngine;
 public class Player2Controller : MonoBehaviour
 {
     public Rigidbody playerRb;
+
     private Animator playerAnim;
+
     public GameObject ammoPrefab;
     private GameObject focalPoint;
+
     public GameManager gameManager;
+
+    public AudioSource playerAudio;
     public AudioClip fireSound;
     public AudioClip jumpSound;
-    public AudioSource playerAudio;
     public AudioClip dieSound;
     public AudioClip collisionSound;
     public AudioClip pickupSound;
+
     public bool isOnGround = true;
-    public float jumpForce =10.0f;
-
-
-    public float speed = 5.0f;
+    public float jumpForce;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
@@ -54,6 +56,11 @@ public class Player2Controller : MonoBehaviour
                 playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                 playerAudio.PlayOneShot(jumpSound, 1.0f);
             }
+            if (transform.position.y <= -5)
+            {
+                playerAnim.SetBool("Death_b", true);
+                gameManager.GameOver();
+            }
         }
     }
 
@@ -77,7 +84,7 @@ public class Player2Controller : MonoBehaviour
             if (other.gameObject.CompareTag("Health"))
             {
                 Debug.Log("Health found!");
-                if (gameManager.health <= 9)
+                if (true)
                 {
                     playerAudio.PlayOneShot(pickupSound,1.0f);
                     gameManager.updateScore(1);

@@ -5,17 +5,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private Rigidbody enemyRb;
+
+    public Animator playerAnim;
     public GameObject ammoPrefab;
+    private GameObject player;
+
     private GameManager gameManager;
     public SpawnManager spawnManager;
-    public Animator playerAnim;
-    private GameObject player;
+
     public AudioSource playerAudio;
     public AudioClip fireSound;
     public AudioClip collisionSound;
 
-
-    public float startDelay = 2;
+    public float startDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class Enemy : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
         spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
+        startDelay = Random.Range(1.0f,3.0f);
         InvokeRepeating("FireAmmo", startDelay, gameManager.fireRate);
     }
 
@@ -34,7 +37,7 @@ public class Enemy : MonoBehaviour
     {
         transform.LookAt(player.transform);
         playerAnim.SetFloat("Speed_f", gameManager.enemySpeed);
-        if(gameManager.level>1) transform.Translate(Vector3.forward * gameManager.enemySpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * gameManager.enemySpeed * Time.deltaTime);
     }
 
     private void FireAmmo()

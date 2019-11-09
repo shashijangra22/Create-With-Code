@@ -5,15 +5,17 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     private Rigidbody bossRb;
+
+    private GameObject player;
     public GameObject ammoPrefab;
+
+    private GameManager gameManager;
+    public Animator playerAnim;
+
     public AudioSource playerAudio;
     public AudioClip fireSound;
     public AudioClip collisionSound;
     public AudioClip dieSound;
-    private GameManager gameManager;
-    public Animator playerAnim;
-    private GameObject player;
-
 
     public float startDelay = 2;
 
@@ -25,7 +27,7 @@ public class Boss : MonoBehaviour
         bossRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
-        InvokeRepeating("FireAmmo", startDelay, gameManager.fireRate);
+        InvokeRepeating("FireAmmo", startDelay, gameManager.bossFireRate);
     }
 
     // Update is called once per frame
